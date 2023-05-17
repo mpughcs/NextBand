@@ -55,7 +55,7 @@ export default function Home() {
         <InfoContainer>
                 <div className="listen">
                     <h2>Listen</h2>
-                    <iframe id="spotify" src="https://open.spotify.com/embed/artist/7zlE048Rl8GTsbWAP1MZeQ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowFullScreen="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe id="spotify" src="https://open.spotify.com/embed/artist/7zlE048Rl8GTsbWAP1MZeQ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
                 <div className="contact">
                     <h2>Contact</h2>
@@ -82,7 +82,7 @@ export default function Home() {
                 {events ? (
                   <div className='eventList'>
                     {events
-                      .sort((a, b) => new Date(b.datetime) - new Date(a.datetime)) // Sort events by date
+                      .sort((a, b) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime()) // Sort events by date
                       .map((event) => (
                         <div key={event.id}>
                           <div className='event'>
@@ -97,7 +97,7 @@ export default function Home() {
                   <p>Loading events...</p>
                 )}
               </div>
-</Events>
+            </Events>
       
       </Main>
     </Container>
