@@ -37,7 +37,7 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"  />
         <link href="https://fonts.googleapis.com/css2?family=Codystar&display=swap" rel="stylesheet"/>
-        <script src="https://kit.fontawesome.com/b52fd21c14.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/b52fd21c14.js" crossOrigin="anonymous"></script>
 
         <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet"/>
 
