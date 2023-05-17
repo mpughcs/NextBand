@@ -22,8 +22,8 @@ const fetcher = (url) => fetch(url).then((res) => res.json())
 export default function Home() {
   const { data: events, error } = useSWR('/api', fetcher);
   if(events){
-    const eventNames = events.map((event) => event.venue.name);
-    console.log(eventNames)
+    // const eventNames = events.map((event) => event.venue.name);
+    // console.log(eventNames)
   }
   if(error) return <div>failed to load</div>
   console.log(events)
