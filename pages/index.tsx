@@ -51,7 +51,7 @@ export default function Home() {
           <img src="/images/mq2.JPG" alt="Max and quinn" />
           <img src="/images/mq.JPG" alt="Max and quinn" />
         </Images>
-        <TopMarquee direction="right"><h1 className='glow'>Sunda Mourners</h1></TopMarquee>
+        <TopMarquee direction="right"><h1 className='glow'>Sunday Mourners</h1></TopMarquee>
         <BottomMarquee direction="left" className=""><h1 className='glow'>Sunday Mourners</h1></BottomMarquee>
         <InfoContainer>
                 <div className="listen">
@@ -72,7 +72,7 @@ export default function Home() {
                         </a></li>
                     </ul>
                   
-                    <a href = "mailto:sundaymourner@gmail.com?subject = Booking?Message=">
+                    <a id='book' href = "mailto:sundaymourner@gmail.com?subject = Booking?Message=">
                         Booking
                     </a>
                 </div>
@@ -136,6 +136,10 @@ const InfoContainer = styled.div`
   justify-content: space-between;
   width: 100%;
   .contact{
+    #book{
+      background-color:white;
+      color: black;
+    }
     display: flex;
     flex-direction: column;
     align-items:flex-end;

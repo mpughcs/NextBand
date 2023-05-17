@@ -32,8 +32,8 @@ const Main = styled.main`
   a{
 
     text-decoration: none;
-    background-color: white;
-    color: black;
+    /* background-color: white; */
+    /* color: black; */
     border-radius: 5px;
     padding: 10px;
     transition: transform 0.5s;
