@@ -26,7 +26,8 @@ export default function Home() {
     // console.log(eventNames)
   }
   if(error) return <div>failed to load</div>
-  console.log(events)
+  // console.log(events)
+  console.log(Array.isArray(events));
   return (
     
     <Container>
@@ -79,13 +80,14 @@ export default function Home() {
             <Events>
               <h2>Events</h2>
               <div>
-                {events ? (
-                  <div className='eventList'>
+             
+                {Array.isArray(events) ? (
+                  <div className="eventList">
                     {events
-                      .sort((a, b) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime()) // Sort events by date
+                      .sort((a, b) => new Date(a.datetime) - new Date(b.datetime))
                       .map((event) => (
                         <div key={event.id}>
-                          <div className='event'>
+                          <div className="event">
                             <a href={event.url}>
                               {event.venue.name} - {event.datetime.split('T')[0]}
                             </a>
