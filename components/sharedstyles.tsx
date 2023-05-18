@@ -29,6 +29,9 @@ const Main = styled.main`
   justify-content: center;
   align-items: center;
   font-family: 'Staatliches', cursive;
+  svg{
+    fill:white;
+  }
   a{
 
     text-decoration: none;
