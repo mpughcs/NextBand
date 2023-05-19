@@ -314,6 +314,9 @@ const ReadMore = styled.div`
   align-items:center;
   padding:40px;
   justify-content: center;
+  .toggle{
+    width:fit-content
+  }
   @media screen and (max-width: 720px) {
     margin: 0px;
     padding: 50px
