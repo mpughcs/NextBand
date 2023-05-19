@@ -48,6 +48,9 @@ const Main = styled.main`
       transform: scale(1.1);
       transform: font-size(2rem); 
   }
+  h2{
+    font-size: 3rem;
+  }
 `
 
 const Title = styled.h1`

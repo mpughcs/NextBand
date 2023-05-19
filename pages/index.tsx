@@ -27,17 +27,37 @@ import { useState } from 'react';
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
+const ReadMoreSection = () => {
+  const [showReadMore, setShowReadMore] = useState(false);
+
+  const toggleReadMore = () => {
+    setShowReadMore(!showReadMore);
+  };
+
+  return (
+    <ReadMore>
+
+  
+    <div>
+      <h2 className="toggle" onClick={toggleReadMore}>{showReadMore ? 'Hide' : 'Read More'}</h2>
+      {showReadMore && (
+        <div className="more">
+          <p className='quote'><span>“Southern California rock and roll only with a slightly harder-edged east coast approach. Combining the embryonic stage of Parquet Courts with the Velvet Underground and Bowie”</span> - <span className='attribution'>Glide Magazine</span></p>
+          <p>Sunday Mourners started humbly as The Good Job Botanical Band in the university dorm rooms of lead guitarist Max Pugh and lead localist Quinn Robinson. It was not until after they were joined by drummer Z Evan Long and bassist Casey Hoerman that the band bloomed into the Sunday Mourners. A protopunk-inspired noisy onslaught of raw rock and roll energy mixed with the intricacies of 60's/70s freak-folk and country music. Characterized by their energetic live performances, DIY production, and eclectic music taste, Sunday Mourners excite listeners with glimpses into a past that never was.</p>
+        </div>
+      )}
+    </div>
+      </ReadMore>
+  );
+};
   
 
 export default function Home() {
   const { data: events, error } = useSWR('/api', fetcher);
-  const [eventNames, setEventNames] = useState([])
-  console.log(events)
-  if(events){
-    // const eventNames = events.map((event) => event.venue.name);
-    // console.log(eventNames)
-  }
-  if(error) return <div>failed to load</div>
+  
+
+
+
   // console.log(events)
   return (
     
@@ -89,6 +109,7 @@ export default function Home() {
                 </div>
             </InfoContainer>
             <Events>
+            <ReadMoreSection />
               <h2>Events</h2>
               <div>
                 {Array.isArray(events) ? (
@@ -154,7 +175,7 @@ const InfoContainer = styled.div`
   width: 100%;
   @media screen and (max-width: 720px) {
     flex-direction: column;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     padding-inline: 0px;
     align-items: center;
     justify-content: center;
@@ -243,6 +264,7 @@ const Events = styled.div`
   justify-content: center;
   z-index: 2;
   
+  
   a{
     font-size: 2vw;
     color: white;
@@ -275,5 +297,33 @@ const Events = styled.div`
     gap:50px;
   }
   
-  padding-bottom: 50px;
+  margin-bottom: 100px;
 `
+
+const ReadMore = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  padding:40px;
+  justify-content: center;
+  @media screen and (max-width: 720px) {
+    margin: 0px;
+    padding: 10px
+  }
+  .toggle:hover{
+    cursor: pointer;
+    color: #f6fc59; 
+  }
+  .quote{
+    font-style: italic;
+    color: #f6fc59;
+    text-align: center;
+  }
+  p{
+    font-size: 1.8vw;
+    @media screen and (max-width: 850px) {
+    font-size: 3vw;
+  }
+  }
+  
+  `
