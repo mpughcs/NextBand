@@ -118,8 +118,8 @@ export default function Home() {
                       .sort((a, b) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime()) // Sort events by date
                       .map((event) => (
                         <div key={event.id}>
-                          <div className='event'>
-                            <a href={event.url}>
+                          <div >
+                            <a className='event' href={event.url}>
                               {event.venue.name} - {event.datetime.split('T')[0]}
                             </a>
                           </div>
@@ -156,6 +156,7 @@ const glowAnimation = keyframes`
 const TopMarquee=styled(Marquee)`
   
   top:0;
+ 
 `
 const BottomMarquee=styled(Marquee)`
   bottom:0;
@@ -266,11 +267,11 @@ const Events = styled.div`
   
   
   a{
-    font-size: 2vw;
+    font-size: 3vw;
     color: white;
     background:none;
-    @media screen and (max-width: 720px) {
-    font-size: 30px;
+    @media screen and (max-width: 1020px) {
+    font-size: 25px;
   }
   }
   a:hover{
@@ -283,11 +284,15 @@ const Events = styled.div`
     transform: scale(1.1);
 
   }
+  .event{
+    display: flex;
+    text-align: center;
+  }
   
   h2{
     font-size: 3vw;
     @media screen and (max-width: 720px) {
-    font-size: 6vw;
+    font-size: 10vw;
   }
   }
   .eventList{
@@ -295,6 +300,9 @@ const Events = styled.div`
     flex-direction: column;
     align-items:center;
     gap:50px;
+    @media screen and (max-width: 720px) {
+      font-size: 10vw;
+    }
   }
   
   margin-bottom: 100px;
@@ -308,7 +316,7 @@ const ReadMore = styled.div`
   justify-content: center;
   @media screen and (max-width: 720px) {
     margin: 0px;
-    padding: 10px
+    padding: 50px
   }
   .toggle:hover{
     cursor: pointer;
@@ -318,11 +326,12 @@ const ReadMore = styled.div`
     font-style: italic;
     color: #f6fc59;
     text-align: center;
+
   }
   p{
     font-size: 1.8vw;
     @media screen and (max-width: 850px) {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   }
   

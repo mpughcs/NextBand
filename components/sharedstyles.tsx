@@ -105,11 +105,25 @@ const Scroll = (direction) => keyframes`
 
 const glowAnimation = keyframes`
   from {
-    text-shadow: 0 0 10px #fff, 0 0 10px #fff, 0 0 10px #f6fc59, 0 0 10px #f6fc59, 0 0 13px #f6fc59, 0 0 20px #f6fc59, 0 0 10px #f6fc59;
+    text-shadow:
+      0 0 10px #fff,
+      0 0 10px #f6fc59,
+      0 0 20px #f6fc59,
+      0 0 30px #f6fc59,
+      0 0 40px #f6fc59,
+      0 0 50px #f6fc59,
+      0 0 60px #f6fc59;
   }
-  
+
   to {
-    text-shadow: 0 0 5px #fff, 0 0 5px #f6fc59, 0 0 0px #f6fc59, 0 0 10px #f6fc59, 0 0 10px #f6fc59, 0 0 10px #f6fc59, 0 0 10px #f6fc59;
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #f6fc59,
+      0 0 20px #f6fc59,
+      0 0 30px #f6fc59,
+      0 0 40px #f6fc59,
+      0 0 50px #f6fc59,
+      0 0 60px #f6fc59;
   }
 `;
 interface TopMarqueeProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -119,13 +133,14 @@ interface TopMarqueeProps extends DetailedHTMLProps<HTMLAttributes<HTMLDivElemen
 const Marquee = styled.div.attrs<TopMarqueeProps>(({ direction }) => ({
   direction: direction || 'left',
 }))<TopMarqueeProps>`
---scrollSpeed: 10s;
---glowSpeed: 3s;
+--scrollSpeed: 16s;
+--glowSpeed: .4s;
 
 /* add styles for if the className=top */
   font-size: 6vw;
   z-index: 1;
   position:fixed;
+  
 
   /* width: 100vw; */
   width: fit-content;
@@ -135,10 +150,15 @@ const Marquee = styled.div.attrs<TopMarqueeProps>(({ direction }) => ({
   animation: ${({ direction }) => Scroll(direction)} var(--scrollSpeed) linear infinite;
   h1{
     display: inline-block;
-    font-size: 6vw;
+    font-size: 5vw;
     font-family: 'Codystar';
     margin: 0;
     padding: 0;
+    @media screen and (max-width: 720px) {
+      font-size: 10vw;
+      width:max-content;
+    
+  }
     &.glow {
       color: #fff;
       text-align: center;
