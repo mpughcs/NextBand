@@ -78,8 +78,8 @@ export default function Home() {
       <Main>
         <Images>
           <img src="/images/splash.jpeg" alt="Max and quinn" />
-          <img src="/images/wh.JPG" alt="Max and quinn" />
           <img src="/images/mq2.JPG" alt="Max and quinn" />
+          <img src="/images/wh.JPG" alt="Max and quinn" />
           <img src="/images/mq.JPG" alt="Max and quinn" />
         </Images>
         <TopMarquee direction="right"><h1 className='glow'>Sunday Mourners</h1></TopMarquee>
