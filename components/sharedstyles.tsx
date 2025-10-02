@@ -18,13 +18,14 @@ const Container = styled.div`
     padding: 0;
     z-index: -2;
   }
-  background-color:black;
+  /* background-color:black; */
 
 `
 const Main = styled.main`
   /* padding: 5rem 0; */
   flex: 1;
   display: flex;
+  background-color: white;
   flex-direction: column;
   justify-content: center;
   align-items: center;

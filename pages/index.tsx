@@ -76,15 +76,15 @@ export default function Home() {
 
       </Head>
       <Main>
-        <Images>
+        {/* <Images>
           <img src="/images/splash.jpeg" alt="Max and quinn" />
           <img src="/images/mq2.JPG" alt="Max and quinn" />
           <img src="/images/wh.JPG" alt="Max and quinn" />
           <img src="/images/mq.JPG" alt="Max and quinn" />
-        </Images>
-        <TopMarquee direction="right"><h1 className='glow'>Sunday Mourners</h1></TopMarquee>
-        <BottomMarquee direction="left" className=""><h1 className='glow'>Sunday Mourners</h1></BottomMarquee>
-        <InfoContainer>
+        </Images> */}
+        {/* <TopMarquee direction="right"><h1 className='glow'>Sunday Mourners</h1></TopMarquee> */}
+        {/* <BottomMarquee direction="left" className=""><h1 className='glow'>Sunday Mourners</h1></BottomMarquee> */}
+        {/* <InfoContainer>
                 <div className="listen">
                     <h2>Listen</h2>
                     <iframe id="spotify" src="https://open.spotify.com/embed/artist/7zlE048Rl8GTsbWAP1MZeQ?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -107,9 +107,9 @@ export default function Home() {
                         Booking
                     </a>
                 </div>
-            </InfoContainer>
+            </InfoContainer> */}
             <Events>
-            <ReadMoreSection />
+            {/* <ReadMoreSection /> */}
               <h2>Events</h2>
               <div>
                 {Array.isArray(events) ? (
@@ -268,7 +268,7 @@ const Events = styled.div`
   
   a{
     font-size: 3vw;
-    color: white;
+    color: black;
     background:none;
     @media screen and (max-width: 1020px) {
     font-size: 25px;
