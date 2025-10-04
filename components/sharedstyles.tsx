@@ -2,56 +2,18 @@ import { DetailedHTMLProps, HTMLAttributes } from 'react'
 import styled, { keyframes } from 'styled-components'
 
 const Container = styled.div`
-  /* padding: 0 0.5rem; */
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: center;
-  /* height: 100vh; */
   min-height: 100vh;
-  img{
-    display: block;
-    max-width: 100%;
-    height: auto;
+
   
-    margin:0;
-    padding: 0;
-    z-index: -2;
-  }
-  /* background-color:black; */
+
+  background-color: white;
 
 `
 const Main = styled.main`
-  /* padding: 5rem 0; */
-  flex: 1;
-  display: flex;
-  background-color: white;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Staatliches', cursive;
-  svg{
-    fill:white;
-  }
-  a{
-
-    text-decoration: none;
-    /* background-color: white; */
-    /* color: black; */
-    border-radius: 5px;
-    padding: 10px;
-    transition: transform 0.5s;
-    margin: 0;
-}
-  a:hover{
-      /* background-color: black; */
-      /* color: white; */
-      transform: scale(1.1);
-      transform: font-size(2rem); 
-  }
-  h2{
-    font-size: 3rem;
-  }
+ 
 `
 
 const Title = styled.h1`
@@ -78,7 +40,7 @@ const Description = styled.p`
   font-size: 1.5rem;
 `
 const CodeTag = styled.code`
-  background: #fafafa;
+  
   border-radius: 5px;
   margin: 0 0.75rem;
   padding: 0.75rem;
@@ -146,7 +108,6 @@ const Marquee = styled.div.attrs<TopMarqueeProps>(({ direction }) => ({
   /* width: 100vw; */
   width: fit-content;
 
-  /* color:white; */
   /* animation: marquee 30s linear infinite; */
   animation: ${({ direction }) => Scroll(direction)} var(--scrollSpeed) linear infinite;
   h1{
