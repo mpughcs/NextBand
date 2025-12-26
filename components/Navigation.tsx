@@ -7,7 +7,7 @@ export default function Navigation() {
     const navigationItems = [
         { href: '/', label: 'Home' },
         { href: '/music', label: 'Music' },
-        { href: '/events', label: 'Events' },
+        { href: '/Events', label: 'Events' },
         { href: '/shop', label: 'Shop', disabled: true },
         { href: '/press', label: 'Press', disabled: true },
         { href: '/blog', label: 'Blog', disabled: true },
