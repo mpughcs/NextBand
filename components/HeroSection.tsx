@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import NewRecordAvailable from './NewRecordAvailable'
 
 export default function HeroSection() {
     return (
@@ -99,6 +100,10 @@ export default function HeroSection() {
 
                         </p>
                     </div>
+                    <hr className="my-4" />
+
+                    <div className="max-w-4xl mx-auto"><NewRecordAvailable /></div>
+
                 </div>
 
                 {/* Contact info at bottom */}

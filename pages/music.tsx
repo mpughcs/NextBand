@@ -62,7 +62,7 @@ export default function Music() {
                     <MusicVideo key={video.title} title={video.title} videoId={video.videoId} isFirst={index === 0} />
                 ))}
                 <div>
-                    <iframe data-testid="embed-iframe" className="border-radius:12px" src="https://open.spotify.com/embed/artist/7zlE048Rl8GTsbWAP1MZeQ?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe data-testid="embed-iframe" className="border-radius:12px" src="https://open.spotify.com/embed/artist/7zlE048Rl8GTsbWAP1MZeQ?utm_source=generator" width="100%" height="352" frameBorder="0" allowFullScreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </div>
                 <NewRecordAvailable />
             </div>

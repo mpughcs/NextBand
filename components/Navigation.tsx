@@ -8,9 +8,9 @@ export default function Navigation() {
         { href: '/', label: 'Home' },
         { href: '/music', label: 'Music' },
         { href: '/events', label: 'Events' },
-        { href: '/shop', label: 'Shop' },
-        { href: '/press', label: 'Press' },
-        { href: '/blog', label: 'Blog' },
+        { href: '/shop', label: 'Shop', disabled: true },
+        { href: '/press', label: 'Press', disabled: true },
+        { href: '/blog', label: 'Blog', disabled: true },
     ]
 
     return (
@@ -35,16 +35,14 @@ export default function Navigation() {
                                 color: router.pathname === item.href ? '#000' : '#0066CC',
                                 textDecoration: router.pathname === item.href ? 'underline' : 'none',
                                 fontSize: '14px',
-                                fontFamily: 'Times New Roman, serif'
+                                fontFamily: 'Times New Roman, serif',
+                                opacity: item.disabled ? 0.5 : 1,
+                                cursor: item.disabled ? 'not-allowed' : 'pointer',
                             }}
-                            onMouseEnter={(e) => {
-                                if (router.pathname !== item.href) {
-                                    e.currentTarget.style.textDecoration = 'underline'
-                                }
-                            }}
-                            onMouseLeave={(e) => {
-                                if (router.pathname !== item.href) {
-                                    e.currentTarget.style.textDecoration = 'none'
+                            className={item.disabled ? 'opacity-50 cursor-not-allowed' : ''}
+                            onClick={(e) => {
+                                if (item.disabled) {
+                                    e.preventDefault()
                                 }
                             }}
                         >
