@@ -8,7 +8,7 @@ export default function NewRecordAvailable() {
             />
             <div className="w-full md:w-2/3">
                 <h2 className="mb-2 text-xl md:text-2xl md:mb-4">
-                    A-Rhythm Absolute - 1/14/26
+                    A-Rhythm Absolute - 1/16/26
                 </h2>
 
                 <h2 className="mb-4 text-xl md:text-2xl md:mb-6">
