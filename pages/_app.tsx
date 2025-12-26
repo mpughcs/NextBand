@@ -19,8 +19,10 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        {/* <Navigation /> */}
-        <Component {...pageProps} />
+        <div className="max-w-7xl mx-auto">
+          <Navigation />
+          <Component {...pageProps} />
+        </div>
       </ThemeProvider>
     </>
   )

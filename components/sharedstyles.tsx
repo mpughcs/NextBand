@@ -4,15 +4,13 @@ import styled, { keyframes } from 'styled-components'
 const Container = styled.div`
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
   min-height: 100vh;
-
-  
 
   background-color: white;
 
 `
 const Main = styled.main`
+color:white
  
 `
 

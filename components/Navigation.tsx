@@ -1,40 +1,59 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { useState } from 'react'
 
-export default function  Navigation() {
+export default function Navigation() {
     const router = useRouter()
-    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const navigationItems = [
+        { href: '/', label: 'Home' },
         { href: '/music', label: 'Music' },
-        { href: '/about', label: 'About' },
-        
-        { href: '/Blog', label: 'Blog' },
-        { href: '/Events', label: 'Events' },
-    ]
-    const menuColors = [
-        '#ff5964',
-        '#ffe74c',
-        '#ffffff',
-        '#38618c',
-        '#35a7ff'
+        { href: '/events', label: 'Events' },
+        { href: '/shop', label: 'Shop' },
+        { href: '/press', label: 'Press' },
+        { href: '/blog', label: 'Blog' },
     ]
 
     return (
-        <div className="flex flex-col h-full flex-1  ">
-            {navigationItems.map((item, index) => (
-                <Link
-                    key={index}
-                    href={item.href}
-                    className={`flex-1 flex p-4 text-black font-medium transition-all duration-200 hover:scale-105 ${router.pathname === item.href ? 'ring-2 ring-black' : ''
-                        }`}
-                    style={{ backgroundColor: menuColors[index % menuColors.length] }}
-                    onClick={() => setIsMenuOpen(false)}
-                >
-                    <p className="text-2xl ">{item.label}</p>
-                </Link>
-            ))}
-        </div>
+        <nav style={{
+            padding: '20px',
+            borderBottom: '2px solid #000',
+            fontFamily: 'Times New Roman, serif'
+        }}>
+            <ul style={{
+                listStyle: 'none',
+                margin: 0,
+                padding: 0,
+                display: 'flex',
+                gap: '20px',
+                flexWrap: 'wrap'
+            }}>
+                {navigationItems.map((item) => (
+                    <li key={item.href}>
+                        <Link
+                            href={item.href}
+                            style={{
+                                color: router.pathname === item.href ? '#000' : '#0066CC',
+                                textDecoration: router.pathname === item.href ? 'underline' : 'none',
+                                fontSize: '14px',
+                                fontFamily: 'Times New Roman, serif'
+                            }}
+                            onMouseEnter={(e) => {
+                                if (router.pathname !== item.href) {
+                                    e.currentTarget.style.textDecoration = 'underline'
+                                }
+                            }}
+                            onMouseLeave={(e) => {
+                                if (router.pathname !== item.href) {
+                                    e.currentTarget.style.textDecoration = 'none'
+                                }
+                            }}
+                        >
+                            {item.label}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </nav>
     )
 }
+

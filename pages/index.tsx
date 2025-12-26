@@ -4,9 +4,9 @@ import HeroSection from '../components/HeroSection'
 
 export default function Home() {
   return (
-    <Container className='font-alan-sans'>
+    <div className='font-alan-sans'>
       <PageHead />
       <HeroSection />
-    </Container>
+    </div>
   )
 }
