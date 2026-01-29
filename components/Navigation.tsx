@@ -34,14 +34,8 @@ export default function Navigation() {
                                 textDecoration: router.pathname === item.href ? 'underline' : 'none',
                                 fontSize: '14px',
                                 fontFamily: 'Times New Roman, serif',
-                                opacity: item.disabled ? 0.5 : 1,
-                                cursor: item.disabled ? 'not-allowed' : 'pointer',
-                            }}
-                            className={item.disabled ? 'opacity-50 cursor-not-allowed' : ''}
-                            onClick={(e) => {
-                                if (item.disabled) {
-                                    e.preventDefault()
-                                }
+                                opacity:  1,
+                                cursor: 'pointer',
                             }}
                         >
                             {item.label}
