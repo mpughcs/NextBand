@@ -8,9 +8,7 @@ export default function Navigation() {
         { href: '/', label: 'Home' },
         { href: '/music', label: 'Music' },
         { href: '/event', label: 'Events' },
-        { href: '/shop', label: 'Shop', disabled: true },
-        { href: '/press', label: 'Press', disabled: true },
-        { href: '/blog', label: 'Blog', disabled: true },
+        { href: '/press', label: 'Press' },
     ]
 
     return (
