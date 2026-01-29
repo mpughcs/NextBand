@@ -8,7 +8,7 @@ export default function NewRecordAvailable() {
             />
             <div className="w-full md:w-2/3">
                 <h2 className="mb-2 text-xl md:text-2xl md:mb-4">
-                    A-Rhythm Absolute - 1/16/26
+                    A-Rhythm Absolute
                 </h2>
 
                 <h2 className="mb-4 text-xl md:text-2xl md:mb-6">
@@ -18,8 +18,8 @@ export default function NewRecordAvailable() {
                         rel="noopener noreferrer"
                         className="text-blue-600 hover:underline"
                     >
-                        Pre-Order
-                    </a> now on Curation Records
+                        Out now
+                    </a> on Curation Records
                 </h2>
 
                 <span className="block mb-2 font-mono text-sm font-bold">
