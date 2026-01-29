@@ -121,7 +121,7 @@ const articles: ArticleData[] = [
         description: "\"Say hello to Sunday Mourners, the new four-piece on Beachwood Sparks' Curation Records, who are dropping their debut album.\""
     }
 ];
-<iframe width="937" height="527" src="https://www.youtube.com/embed/PVBfLjJbzg4" title="Sunday Mourners - A-Rhythm Absolute ALBUM REVIEW" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 const videos = [
     {
         title: "Sunday Mourners - A-Rhythm Absolute ALBUM REVIEW",
