@@ -5,12 +5,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  // Enable SPA-like routing
   trailingSlash: false,
-  // Optimize for client-side navigation
-  experimental: {
-    optimizeCss: true,
-  },
 }
 
 module.exports = nextConfig
