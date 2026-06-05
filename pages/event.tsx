@@ -59,7 +59,8 @@ export default function EventsPage() {
                                             <ul style={{ listStyle: 'none', padding: 0, margin: 0, overflow: 'hidden' }}>
                                                 <li>{event.venue.name} - {event.datetime.split('T')[0]}</li>
                                                 <li style={{ display: 'flex', flexDirection: 'row', gap: '5px' }}>
-                                                  {event.lineup ? event.lineup.filter((artist) => artist !== 'Sunday Mourners').slice(0, 3).map((artist) =>   <><span>w/ </span> <li>{artist}</li></>) : null}
+                                                   {event.lineup.length > 1 ? <span>w/ </span> : null}
+                                                        {event.lineup ? event.lineup.filter((artist) => artist !== 'Sunday Mourners').slice(0, 3).map((artist) => <li key={artist}>{artist},</li>) : null}
                                                 </li>
 
 
