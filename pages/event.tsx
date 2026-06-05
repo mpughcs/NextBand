@@ -56,7 +56,21 @@ export default function EventsPage() {
                                             onMouseEnter={(e) => e.currentTarget.style.textDecoration = 'underline'}
                                             onMouseLeave={(e) => e.currentTarget.style.textDecoration = 'none'}
                                         >
-                                            {event.venue.name} - {event.datetime.split('T')[0]}
+                                            <ul style={{ listStyle: 'none', padding: 0, margin: 0, overflow: 'hidden' }}>
+                                                <li>{event.venue.name} - {event.datetime.split('T')[0]}</li>
+                                                <li style={{ display: 'flex', flexDirection: 'row', gap: '5px' }}>
+                                                  {event.lineup ? event.lineup.filter((artist) => artist !== 'Sunday Mourners').slice(0, 3).map((artist) =>   <><span>w/ </span> <li>{artist}</li></>) : null}
+                                                </li>
+
+
+                                                <li style={{ display: 'flex', flexDirection: 'row', gap: '5px' }}>
+                                                    {event.venue.city && <li>{event.venue.city},</li>}
+                                                    {event.venue.region && <li>{event.venue.region},</li>}
+                                                    {event.venue.country && <li>{event.venue.country}</li>}
+                                                </li>
+
+
+                                            </ul>
                                         </a>
                                     </div>
                                 ))}

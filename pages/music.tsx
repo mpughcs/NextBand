@@ -36,7 +36,7 @@ function MusicVideo({ title, videoId, isFirst = false }: { title: string, videoI
 }
 export default function Music() {
     return (
-        <>
+        <> 
             <Head>
                 <title>Music - SUNDAY MOURNERS</title>
                 <meta name="description" content="Sunday Mourners Music" />
